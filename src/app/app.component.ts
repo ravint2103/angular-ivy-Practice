@@ -9,14 +9,14 @@ import { HelloComponent, HiComponent } from "./hello.component";
 })
 export class AppComponent {
   // name = 'Angular ' + VERSION.major + ' Dynamic Component';
-  name = " Component";
+  name = " Angular";
   @ViewChild(HostDirective, { static: true })
   childref: HostDirective;
-  components = [HelloComponent, HiComponent];
+  components = [HiComponent, HelloComponent ];
 
   constructor(public facRes: ComponentFactoryResolver) {}
+
   loadComponent(id) {
-    console.log(id);
     this.childref.viewref.clear();
     const resFactory = this.facRes.resolveComponentFactory(this.components[id]);
     this.childref.viewref.createComponent(resFactory);

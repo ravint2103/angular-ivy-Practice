@@ -1,7 +1,7 @@
 import { Directive, ViewContainerRef } from "@angular/core";
 
 @Directive({
-  selector: "[host]"
+  selector: "[Host]"
 })
 export class HostDirective {
   constructor(public viewref: ViewContainerRef) {}
