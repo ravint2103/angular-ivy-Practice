@@ -9,6 +9,7 @@ import { HostDirective } from "./host.directive";
 @NgModule({
   imports: [BrowserModule, FormsModule],
   declarations: [AppComponent, HelloComponent, HiComponent, HostDirective],
+  entryComponents: [HelloComponent, HiComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
